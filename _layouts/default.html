@@ -1,12 +1,46 @@
 <!DOCTYPE html>
-  <html>
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <title>{{ page.title }}</title>
-  </head>
-  <body>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta charset="utf-8">
+<!-- ???? -->
+<link type="text/css" rel="stylesheet" href="/assets/default.css">
+<link rel="shortcut icon" href="{{ site.avatar }}">
+<link rel="stylesheet" href="/assets/font-awesome/css/font-awesome.min.css">
+<script src="/assets/script.js"></script>
 
+<title>{{ page.title }} | {{ site.name }} </title>
+</head>
+<body>
+<!-- ??? -->
+<div class="sidebar">
+    <a href="/">
+        <img id="avatar" width="80" height="80" style="border-radius: 50%" src="{{ site.avatar }}">
+    </a>
+    <h2><a href="/">???</a></h2>
+    <p> {{ site.description }}</p>
+    <ul>
+        <li><a href="/">???</a></li>
+        <li><a href="/archives.html">??</a></li>
+        <li><a href="/tags.html">??</a></li>
+        <li><a href="/links.html">??</a></li>
+        <li><a href="/projects.html">??</a></li>
+        <li><a href="/about.html">??</a></li>
+        <li><a href="/feed.xml">??</a></li>
+    </ul>
+</div>
+<!-- ????? -->
+<!-- ?? -->
+<div class="postlist">
     {{ content }}
-
-  </body>
-  </html>
+</div>
+<!-- ???? -->
+<!-- ?? -->
+<div class="footer">
+    2015 - {{ site.time | date:"%Y" }} © <a href="/">LastAvengers</a> | Powered by <a href="http://jekyllrb.com/">Jekyll</a>
+</div>
+</body>
+<!-- ???? -->
+<!-- gostats ?? -->
+{% include blog-stat %}
+<script> listenallimg(); </script>
+</html>
